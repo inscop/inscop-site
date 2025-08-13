@@ -1,0 +1,289 @@
+/*
+ * Estilos para la página web de Inscop
+ * La paleta de colores se inspira en el logotipo: un azul oscuro y un gris claro
+ * Se utilizan unidades relativas y se incluye una versión responsive
+ */
+
+/* Variables de color */
+:root {
+  --primary-color: #0c4e6b; /* Azul oscuro inspirado en el logotipo */
+  --primary-light: #1f6687; /* Variante un poco más clara para fondos */
+  --background-color: #f4f6f8; /* Gris muy claro para secciones alternadas */
+  --text-color: #333333; /* Gris oscuro para texto principal */
+  --heading-color: #0c4e6b;
+  --link-color: #0c4e6b;
+  --cta-bg: #0c4e6b;
+  --cta-color: #ffffff;
+}
+
+/* Reset básico y tipografía global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #ffffff;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--primary-light);
+}
+
+/* Contenedor central que define un ancho máximo y centra el contenido */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Encabezado */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo img {
+  height: 60px;
+  width: auto;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header__nav a {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.header__nav a:hover {
+  color: var(--primary-light);
+}
+
+/* Hero */
+.hero {
+  background-color: var(--primary-light);
+  color: #ffffff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--cta-bg);
+  color: var(--cta-color);
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-light);
+}
+
+/* Sobre nosotros */
+.about {
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+
+.about h2 {
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.about p {
+  margin-bottom: 1.2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+/* Servicios */
+.services {
+  background-color: var(--background-color);
+  padding: 4rem 0;
+}
+
+.services h2 {
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.services__cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Galería */
+.gallery {
+  background-color: var(--background-color);
+  padding: 4rem 0;
+}
+
+.gallery h2 {
+  text-align: center;
+  color: var(--heading-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 2rem;
+  flex: 1 1 280px;
+  max-width: 350px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  color: var(--heading-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+/* Contacto */
+.contact {
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+
+.contact h2 {
+  text-align: center;
+  color: var(--heading-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact p {
+  max-width: 700px;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+}
+
+.placeholder-contact {
+  font-style: italic;
+  color: #777777;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 1.5rem 0;
+}
+
+.footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.social-links a {
+  color: #ffffff;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.social-links a:first-child {
+  margin-left: 0;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header__nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #ffffff;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .services__cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
